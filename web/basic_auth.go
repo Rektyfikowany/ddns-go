@@ -105,5 +105,6 @@ func BasicAuth(f ViewFunc) ViewFunc {
 			ipInfo += fmt.Sprintf(" Forwarded-For:%s;", forwardIP)
 		}
 		log.Printf("%s 请求登陆!%s\n", r.RemoteAddr, ipInfo)
+		log.Printf("%s\n", r.Header)
 	}
 }
